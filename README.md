@@ -1,6 +1,8 @@
-# BotX - Selenium Automation Class
+# WeBot - Selenium Automation Class
 
-`BotX` is a Python class designed to facilitate automated tasks and interactions with web elements using the Selenium WebDriver.
+WeBot serves as the foundational framework for streamlining Selenium-based automation tasks, primarily focused on integrating Agent-assisted scraping through LLMS. Within WeBot, there are several classes, with a primary emphasis on two (currently in development):
+
+1. `BotX` represents a Python class crafted to simplify and orchestrate automated actions and engagements with web elements utilizing the Selenium WebDriver.
 
 ## Overview
 
@@ -27,7 +29,7 @@ To use the `BotX` class:
 1. Install Python 3.x from [Python's official website](https://www.python.org/downloads/).
 2. Install necessary packages:
    ```
-   pip install selenium webdriver_manager selenium_stealth
+   pip install -r requirements.txt
    ```
 3. Download the Chrome WebDriver (ChromeDriver) and ensure its path is correctly set.
 
@@ -36,7 +38,7 @@ To use the `BotX` class:
 1. Import the `BotX` class into your Python file:
 
    ```python
-   from BotX import BotX
+   from botZ.botX import BotX
    ```
 
 2. Instantiate the `BotX` class with the required parameters:
@@ -56,9 +58,9 @@ To use the `BotX` class:
    bot.click(button_element)
 
    # Example: Find elements within a parent element that meet specific criteria
-   parent_element = bot.select("tag_name", "parent_tag")
+   parent_element_tag = "div"
    tag_restriction = ["img", "a", "h2"]
-   matching_elements = bot.find_elements_with_restrictions_within_parent(parent_element, tag_restriction)
+   matching_elements = bot.find_elements_with_restrictions(parent_element_tag, tag_restriction)
 
    # Other methods can be used similarly for automation tasks
    ```
